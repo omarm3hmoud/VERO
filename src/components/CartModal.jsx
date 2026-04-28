@@ -71,7 +71,8 @@ const CartModal = ({ isOpen, onClose }) => {
     cartItems.forEach((item, index) => {
       message += `${index + 1}. ${item.name} (${item.type}) - ${item.size}\n`;
       message += `   الكمية: ${item.quantity} | السعر: ${item.price * item.quantity} ج.م\n`;
-      message += `   رابط المنتج: https://omarm3hmoud.github.io/VERO/product/${item.id}\n`;
+      const baseUrl = window.location.origin + import.meta.env.BASE_URL;
+      message += `   رابط المنتج: ${baseUrl}product/${item.id}\n`;
     });
 
     message += `\n*الإجمالي:* ${calculateTotal()} ج.م`;
