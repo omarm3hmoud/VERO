@@ -80,7 +80,7 @@ const Products = () => {
       type: selectedTypes[product.id] || product.types[0],
       size: product.size,
       price: product.price,
-      image_url: product.image_url,
+      image_url: product.images && product.images.length > 0 ? product.images[0] : product.image_url,
       quantity: 1
     };
 
