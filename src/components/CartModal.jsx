@@ -71,6 +71,9 @@ const CartModal = ({ isOpen, onClose }) => {
     cartItems.forEach((item, index) => {
       message += `${index + 1}. ${item.name} (${item.type}) - ${item.size}\n`;
       message += `   الكمية: ${item.quantity} | السعر: ${item.price * item.quantity} ج.م\n`;
+      if (item.image_url) {
+        message += `   صورة المنتج: ${item.image_url}\n`;
+      }
     });
 
     message += `\n*الإجمالي:* ${calculateTotal()} ج.م`;
