@@ -6,7 +6,7 @@ export const preloadFrames = (onProgress, onComplete) => {
   for (let i = 1; i <= TOTAL_FRAMES; i++) {
     const img = new Image();
     const num = String(i).padStart(4, '0');
-    img.src = `/frames/frame_${num}.jpg`;
+    img.src = `${import.meta.env.BASE_URL}frames/frame_${num}.jpg`;
     
     img.onload = () => {
       loadedCount++;

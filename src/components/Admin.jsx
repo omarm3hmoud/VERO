@@ -193,7 +193,7 @@ const Admin = () => {
       <div className="admin-container dark-theme">
         <div className="admin-card auth-card">
           <div className="admin-header">
-            <img src="/logo.jpg" alt="VERO Logo" className="admin-logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="VERO Logo" className="admin-logo" />
             <h2>تسجيل الدخول</h2>
             <p>يرجى إدخال كلمة المرور للوصول للوحة التحكم</p>
           </div>
@@ -224,7 +224,7 @@ const Admin = () => {
   return (
     <div className="admin-container dark-theme">
       <div className="admin-header">
-        <img src="/logo.jpg" alt="VERO Logo" className="admin-logo" />
+        <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="VERO Logo" className="admin-logo" />
         <h2>{editingId ? 'تعديل المنتج' : 'إضافة منتج جديد'}</h2>
         <p>{editingId ? 'قم بتعديل بيانات المنتج أدناه' : 'أدخل بيانات المنتج الجديد'}</p>
       </div>
@@ -299,7 +299,7 @@ const Admin = () => {
             {productsList.map(product => (
               <div key={product.id} className="admin-product-item">
                 <img 
-                  src={product.images && product.images.length > 0 ? product.images[0] : '/logo.jpg'} 
+                  src={product.images && product.images.length > 0 ? product.images[0] : `${import.meta.env.BASE_URL}logo.jpg`} 
                   alt={product.name} 
                   className="admin-product-img"
                 />

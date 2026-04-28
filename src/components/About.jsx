@@ -26,7 +26,7 @@ const About = () => {
       <div className="about-inner">
         <div className="about-logo-wrap reveal">
           <div className="about-logo-bg">
-            <img src="/logo.jpg" alt="VERO Logo" />
+            <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="VERO Logo" />
           </div>
         </div>
         <div className="about-content reveal">

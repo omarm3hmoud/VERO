@@ -28,7 +28,7 @@ const Navbar = ({ onOpenCart }) => {
   return (
     <nav id="navbar" className={scrolled ? 'scrolled' : ''}>
       <a href="#" className="nav-brand">
-        <img src="/logo.jpg" alt="VERO Logo" />
+        <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="VERO Logo" />
         <span>VERO</span>
       </a>
       <ul className="nav-links">

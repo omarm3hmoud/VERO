@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer id="footer">
       <div className="footer-logo-wrap">
-        <img src="/logo.jpg" alt="VERO" />
+        <img src={`${import.meta.env.BASE_URL}logo.jpg`} alt="VERO" />
         <span>VERO</span>
       </div>
       <div className="footer-tagline">عبّر عن حضورك — VERO Luxury Perfumes</div>
